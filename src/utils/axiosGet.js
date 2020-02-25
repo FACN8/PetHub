@@ -11,7 +11,7 @@ const  axiosGet = url =>{
 
     return axios.get(url)
     .then(checkResponse)
-    .catch(error => throw new Error(`Could not get data , error:${error}`))
+    .catch(error => {throw new Error(`Could not get data , error:${error}`)})
 }
 
 export default axiosGet;
