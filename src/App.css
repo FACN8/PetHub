@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.PetFrame{
+  width: 556px;
+  height: 710px;
+  background: blueviolet;
+  text-align: center;
+  position: fixed;
+  border-radius: 54%/65% 65% 47% 47%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: 10px 10px 40px -20px rgba(0, 0, 0, 0.4);
+
+}
+ .PetFrame-inner{
+  width: 256px;
+  height: 310px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 54%/65% 65% 47% 47%;
+  overflow: hidden;
+ }
+/* b3ml aldaqera alsfra alfadee mn fwq  */
+ .loop {
+  width: 30px;
+  height: 30px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  top: -12px;
+}
+.loop:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fcf8ec;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -9px;
+  margin-top: -9px;
+  border: 2px solid blueviolet;
+  box-shadow: -1px -1px 2px 2px blueviolet;
+}
+
+
+.buttons {  
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e84b30;
+  margin: 8px 10px;
+  border: 2px solid #e74327;
+  box-shadow: 1px 1px 3px 2px blueviolet;
+  -webkit-transition: background-color 200ms ease, box-shadow 200ms ease;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
 }
