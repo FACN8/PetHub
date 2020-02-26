@@ -22,7 +22,7 @@ const StartFrame = ({ setUserData }, ...props) => {
   }
   return (
     <div className='input-form-container'>
-      <div className='start'>GitHub</div>
+      <div className='start'>PetHub</div>
       <br></br>
       <form onSubmit={handleSubmit} >
         <label htmlFor='username'>
@@ -31,8 +31,11 @@ const StartFrame = ({ setUserData }, ...props) => {
         <button id='submit-btn' type='submit' value='Submit'>
           ➜
     </button>
-      </form>
-      {errState && <span className='err-msg'>Error .. try again</span>}
+    </form>
+    {errState && <span className='err-msg'>Error .. try again</span>}
+    <div className='img'>
+       <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+    </div>
     </div>
   )
 }
