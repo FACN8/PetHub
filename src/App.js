@@ -15,32 +15,38 @@ function App() {
   const [hunger, setHunger] = React.useState(100);
   const [userData, setUserData] = React.useState(null);//DUMMY DATA JUST TO LOAD -- REMOVE THIS
   const [alive, setAlive] = React.useState(true);
-  
 
   React.useEffect(() => {
     if (health <= 0) {
       setAlive(false);
     }
   }, [health]);
-  
 
-  React.useEffect (()=>{
-   const hungerTimer = setInterval(() => {
-      setHunger(previousHunger => previousHunger >= 5 ? previousHunger - 5 : 0);
-      setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
+  React.useEffect(() => {
+    let timer = setInterval(() => {
+
+      setUserData(data => {
+
+        if (data) {
+
+          setHunger(previousHunger => {
+            if (previousHunger >= 5) {
+              return previousHunger - 5;
+            } else {
+              setHealth(previousHealth => previousHunger === 0 ? previousHealth - 5 : previousHealth);
+              return 0;
+            }
+          });
+
+        }
+
+        return data;
+      });
     }, 5000);
-    return ((hungerTimer)=>clearInterval(hungerTimer))
-  },[userData])
+    return () => clearInterval(timer);
+  }, [userData]);
 
-
-  if (!userData) {
-    return (
-      <div className="PetFrame">
-        <StartFrame
-          setUserData={setUserData} />
-      </div>
-    );
-  } else if (!alive) {
+  if (!alive) {
 
     return (
       <div className="PetFrame">
@@ -48,17 +54,24 @@ function App() {
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
-          setHunger={setHunger} />  
+          setHunger={setHunger} />
+      </div>
+    );
+  } else if (!userData) {
+    return (
+      <div className="PetFrame">
+        <StartFrame
+          setUserData={setUserData} />
       </div>
     );
   } else {
 
     return (
       <div className="PetFrame">
-        
+
         <PetFrame
           userData={userData} />
-          <HealthBar
+        <HealthBar
           health={health} />
         <HungerBar
           hunger={hunger} />
