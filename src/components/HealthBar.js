@@ -1,11 +1,15 @@
-import React from "react"
+import React from "react";
 
-
-const HealthBar = props =>{
+const HealthBar = props => {
+    let style = {
+        width: props.health + "%"
+    };
 
     return (
-        <h2>{props.health}</h2>
-    )
-}
+        <div className="progress">
+            <div className="bar" style={style}></div>
+        </div>
+    );
+};
 
 export default HealthBar;
