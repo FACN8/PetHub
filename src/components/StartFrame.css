@@ -21,3 +21,7 @@
     text-shadow:none;
     
     }
+
+    .err-msg{
+        color: tomato;
+    }

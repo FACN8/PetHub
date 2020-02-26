@@ -49,23 +49,23 @@ function App() {
   } else {
 
     return (
-      <div className="App">
-
-        <HealthBar
+      <div className="PetFrame">
+        
+        <PetFrame
+          userData={userData} />
+          <HealthBar
           health={health} />
         <HungerBar
           hunger={hunger} />
-        <PetFrame
-          userData={userData} />
 
         <div className="actions-container">
 
-          <FeedAction
+          {/* <FeedAction
             setHunger={setHunger} />
           <PetAction
             setHealth={setHealth} />
           <HitAction
-            setHealth={setHealth} />
+            setHealth={setHealth} /> */}
 
         </div>
       </div>
