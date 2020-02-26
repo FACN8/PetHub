@@ -16,21 +16,27 @@ function App() {
   const [userData, setUserData] = React.useState(null);
   const [alive, setAlive] = React.useState(true);
 
-  setInterval(() => {
-    setHunger(previousHunger => previousHunger >= 5 ? previousHunger - 5 : 0);
-    setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
-  }, 5000);
+
 
   React.useEffect(() => {
     if (health <= 0) {
       setAlive(false);
     }
   }, [health]);
+  
 
+  React.useEffect (()=>{
+   const hungerTimer = setInterval(() => {
+      setHunger(previousHunger => previousHunger >= 5 ? previousHunger - 5 : 0);
+      setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
+    }, 5000);
+    return ((hungerTimer)=>clearInterval(hungerTimer))
+
+  },[userData])
   if (!userData) {
 
     return (
-      <div className="App">
+      <div className="PetFrame">
         <StartFrame
           setUserData={setUserData} />
       </div>
@@ -38,7 +44,7 @@ function App() {
   } else if (!alive) {
 
     return (
-      <div className="App">
+      <div className="PetFrame">
         <EndFrame
           setAlive={setAlive}
           setUserData={setUserData}
@@ -60,12 +66,12 @@ function App() {
 
         <div className="actions-container">
 
-          {/* <FeedAction
+          <FeedAction
             setHunger={setHunger} />
           <PetAction
             setHealth={setHealth} />
           <HitAction
-            setHealth={setHealth} /> */}
+            setHealth={setHealth} />
 
         </div>
       </div>
