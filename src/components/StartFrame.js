@@ -32,6 +32,9 @@ const StartFrame = ({setUserData},...props) =>{
     </button>
     </form>
     {errState && <span className='err-msg'>Error .. try again</span>}
+    <div className='img'>
+       <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+    </div>
     </div>
   )
 }
