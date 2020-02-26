@@ -2,7 +2,7 @@ import React from "react";
 
 const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
   const style = {
-    "font-size": "60px"
+    "fontSize": "60px"
   };
 
   const reset = () => {
@@ -13,6 +13,10 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
     setHealth(100);
     setHunger(100);
     setUserData(null);
+    localStorage.removeItem('alive');
+    localStorage.removeItem('health');
+    localStorage.removeItem('hunger');
+    localStorage.removeItem('userData');
   }, []);
 
   return (

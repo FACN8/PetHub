@@ -25,7 +25,7 @@ const StartFrame = ({ setUserData }, ...props) => {
       <br></br>
       <form onSubmit={handleSubmit} >
         <label htmlFor='username'>
-          <input id="name-input" placeholder="Enter GitHub Username" autocomplete="off" name='username' type='text' />
+          <input id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
         </label>
         <button id='submit-btn' type='submit' value='Submit'>
           ➜
