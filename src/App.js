@@ -13,15 +13,9 @@ import PetFrame from "./components/PetFrame";
 function App() {
   const [health, setHealth] = React.useState(100);
   const [hunger, setHunger] = React.useState(100);
-  const [userData, setUserData] = React.useState('k');//DUMMY DATA JUST TO LOAD -- REMOVE THIS
+  const [userData, setUserData] = React.useState(null);//DUMMY DATA JUST TO LOAD -- REMOVE THIS
   const [alive, setAlive] = React.useState(true);
   
-  React.useEffect(() => {
-    setInterval(() => { // CREATE PROMISE TO GET CURRENT VALUE
-      setHealth(previousHealth => hunger <= 0 ? previousHealth - 1 : previousHealth);
-      setHunger(previousHunger => previousHunger >= 1 ? previousHunger - 1 : 0);
-    }, 100);
-  }, []);
 
   React.useEffect(() => {
     if (health <= 0) {
@@ -36,12 +30,12 @@ function App() {
       setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
     }, 5000);
     return ((hungerTimer)=>clearInterval(hungerTimer))
-
   },[userData])
-  if (!userData) {
 
+
+  if (!userData) {
     return (
-      <div className="App">
+      <div className="PetFrame">
         <StartFrame
           setUserData={setUserData} />
       </div>
@@ -54,7 +48,7 @@ function App() {
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
-          setHunger={setHunger} /> */}
+          setHunger={setHunger} />  
       </div>
     );
   } else {
@@ -71,12 +65,12 @@ function App() {
 
         <div className="actions-container">
 
-          {/* <FeedAction
+          <FeedAction
             setHunger={setHunger} />
           <PetAction
             setHealth={setHealth} />
           <HitAction
-            setHealth={setHealth} /> */}
+            setHealth={setHealth} />
 
         </div>
       </div>
