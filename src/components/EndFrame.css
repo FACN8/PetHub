@@ -1,0 +1,25 @@
+.reset-button {
+    background: blueviolet;
+
+    color: white;
+    
+    border-style: outset;
+    
+    border-color: #eee;
+    
+    height: 30px;
+    
+    width: 33px;
+    
+    font: bold 15px arial, sans-serif;
+    
+    text-shadow:none;
+    
+    }
+.reset-button:hover {
+    cursor: pointer;
+}
+
+.end-frame-container {
+position: absolute;
+}

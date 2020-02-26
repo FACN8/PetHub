@@ -1,0 +1,27 @@
+.input-form-container{
+    background-color:transparent;
+}
+
+
+#submit-btn {
+    background: blueviolet;
+
+    color: white;
+    
+    border-style: outset;
+    
+    border-color: #eee;
+    
+    height: 30px;
+    
+    width: 33px;
+    
+    font: bold 15px arial, sans-serif;
+    
+    text-shadow:none;
+    
+    }
+
+    .err-msg{
+        color: tomato;
+    }

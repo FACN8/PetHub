@@ -28,20 +28,29 @@ function App() {
       setAlive(false);
     }
   }, [health]);
+  
 
+  React.useEffect (()=>{
+   const hungerTimer = setInterval(() => {
+      setHunger(previousHunger => previousHunger >= 5 ? previousHunger - 5 : 0);
+      setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
+    }, 5000);
+    return ((hungerTimer)=>clearInterval(hungerTimer))
+
+  },[userData])
   if (!userData) {
 
     return (
       <div className="App">
-        {/* <StartFrame
-          setUserData={setUserData} /> */}
+        <StartFrame
+          setUserData={setUserData} />
       </div>
     );
   } else if (!alive) {
 
     return (
-      <div className="App">
-        {/* <EndFrame
+      <div className="PetFrame">
+        <EndFrame
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
@@ -51,14 +60,14 @@ function App() {
   } else {
 
     return (
-      <div className="App">
-
-        <HealthBar
+      <div className="PetFrame">
+        
+        <PetFrame
+          userData={userData} />
+          <HealthBar
           health={health} />
         <HungerBar
           hunger={hunger} />
-        {/* <PetFrame
-          userData={userData} /> */}
 
         <div className="actions-container">
 
