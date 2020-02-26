@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.progress {
+  border-radius: 0;
+  width: 100%;
+  background-color: grey;
+}
+
+.bar {
+  border-radius: 1rem;
+  width: 30%;
+  height: 30px;
+  background-color: green;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

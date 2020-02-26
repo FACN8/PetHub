@@ -13,13 +13,15 @@ import PetFrame from "./components/PetFrame";
 function App() {
   const [health, setHealth] = React.useState(100);
   const [hunger, setHunger] = React.useState(100);
-  const [userData, setUserData] = React.useState(null);
+  const [userData, setUserData] = React.useState('k');//DUMMY DATA JUST TO LOAD -- REMOVE THIS
   const [alive, setAlive] = React.useState(true);
-
-  setInterval(() => {
-    setHunger(previousHunger => previousHunger >= 5 ? previousHunger - 5 : 0);
-    setHealth(previousHealth => hunger === 0 ? previousHealth - 5 : previousHealth);
-  }, 5000);
+  
+  React.useEffect(() => {
+    setInterval(() => { // CREATE PROMISE TO GET CURRENT VALUE
+      setHealth(previousHealth => hunger <= 0 ? previousHealth - 1 : previousHealth);
+      setHunger(previousHunger => previousHunger >= 1 ? previousHunger - 1 : 0);
+    }, 100);
+  }, []);
 
   React.useEffect(() => {
     if (health <= 0) {
@@ -31,19 +33,19 @@ function App() {
 
     return (
       <div className="App">
-        <StartFrame
-          setUserData={setUserData} />
+        {/* <StartFrame
+          setUserData={setUserData} /> */}
       </div>
     );
   } else if (!alive) {
 
     return (
       <div className="App">
-        <EndFrame
+        {/* <EndFrame
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
-          setHunger={setHunger} />
+          setHunger={setHunger} /> */}
       </div>
     );
   } else {
@@ -55,17 +57,17 @@ function App() {
           health={health} />
         <HungerBar
           hunger={hunger} />
-        <PetFrame
-          userData={userData} />
+        {/* <PetFrame
+          userData={userData} /> */}
 
         <div className="actions-container">
 
-          <FeedAction
+          {/* <FeedAction
             setHunger={setHunger} />
           <PetAction
             setHealth={setHealth} />
           <HitAction
-            setHealth={setHealth} />
+            setHealth={setHealth} /> */}
 
         </div>
       </div>
