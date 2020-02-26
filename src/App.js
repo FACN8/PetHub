@@ -37,7 +37,7 @@ function App() {
               return 0;
             }
           });
-          
+
         }
 
         return data;
@@ -61,10 +61,7 @@ function App() {
     return (
       <div className="PetFrame">
         <StartFrame
-          setAlive={setAlive}
-          setUserData={setUserData}
-          setHealth={setHealth}
-          setHunger={setHunger} />
+          setUserData={setUserData} />
       </div>
     );
   } else {
