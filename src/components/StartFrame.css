@@ -19,9 +19,15 @@
     font: bold 15px arial, sans-serif;
     
     text-shadow:none;
+    /* margin-top: 50%; */
     
     }
 
     .err-msg{
         color: tomato;
+    }
+    .start{
+        margin-top: 40%;
+    font-size: xx-large;
+    font-family: 'Press Start 2P' ;
     }
