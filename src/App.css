@@ -43,18 +43,19 @@
   height: 710px;
   background: blueviolet;
   text-align: center;
-  position: fixed;
+  position: relative;
   border-radius: 54%/65% 65% 47% 47%;
-  top: 50%;
+  margin: auto;
+  /* top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); */
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   box-shadow: 10px 10px 40px -20px rgba(0, 0, 0, 0.4);
-
+  
 }
  .PetFrame-inner{
   width: 256px;
