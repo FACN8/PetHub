@@ -7,21 +7,17 @@ const PetFrame =props =>{
          <div className="loop"></div>
        <div className ="PetFarme-inner">
        </div>
-       <img alt='avatar-img' src={props.userData.avatar_url} />
-        {/* <img src="https://www.tynker.com/projects/screenshot/58a47dc8949b56e02b8b48a9/pekmon-mlg-eat-donritos-and-mtn-dew.png" /> */}
-        
-     
-         {/* <div className="buttons">
-         <div className="button button--a">
-             foot
-         </div>
-         <div className="button button--b">
-             pet
-         </div>
-         <div className="button button--c">
-             hit
-         </div>
-       </div>  */}
+       
+       <div className="name">
+        <h1>
+        {props.userData.name}
+        </h1>
+        </div>
+       <div className='img-user'>
+       <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+    </div>
+       <br></br>
+       
     </div> 
     )
 }
