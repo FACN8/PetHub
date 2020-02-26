@@ -2,12 +2,13 @@ import React from "react";
 
 const HungerBar = props => {
     let style = {
-        width: props.hunger + "%"
+        "width": props.hunger + "%",
+        "font-size": "30px"
     };
 
     return (
-        <div className="progress">
-            <div className="bar" style={style}></div>
+        <div className="progress-hunger">
+            <div className="bar" style={style}>🍪</div>
         </div>
     );
 };

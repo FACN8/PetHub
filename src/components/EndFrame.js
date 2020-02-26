@@ -1,6 +1,10 @@
 import React from "react";
 
 const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
+  const style = {
+    "font-size": "60px"
+  };
+
   const reset = () => {
     setAlive(true);
   };
@@ -13,15 +17,15 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
 
   return (
     <div className='end-frame-container'>
-      <div className='Gameover'>Game Over !</div>
+      <div className='Gameover'>Game Over!</div>
       <br></br>
-      <button onClick={reset} className='reset-button'>
-        Restart!
-      </button>
+      <div onClick={reset} className="button" style={style}>
+        ⟳
+      </div>
 
       <div className='img'>
-       <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
-    </div>
+        <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+      </div>
     </div>
   );
 };
