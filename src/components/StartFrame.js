@@ -21,7 +21,7 @@ const StartFrame = ({setUserData},...props) =>{
         }
   return (
     <div className='input-form-container'>
-      <div className='start'>GitHub</div>
+      <div className='start'>PetHub</div>
       <br></br>
     <form onSubmit={handleSubmit} >
     <label htmlFor='username'>
