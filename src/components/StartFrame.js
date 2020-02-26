@@ -1,6 +1,5 @@
 import React from "react"
 import axiosGet from "../utils/axiosGet"
-import "./StartFrame.css"
 
 
 const StartFrame = ({ setUserData }, ...props) => {

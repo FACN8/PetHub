@@ -1,5 +1,4 @@
 import React from "react";
-import "./EndFrame.css"
 
 const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
   const reset = () => {
