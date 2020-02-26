@@ -3,7 +3,7 @@ import React from "react";
 const HealthBar = props => {
     let style = {
         "width": props.health + "%",
-        "font-size": "30px"
+        "fontSize": "30px"
     };
 
     return (

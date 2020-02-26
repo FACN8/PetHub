@@ -11,10 +11,17 @@ import PetAction from "./components/PetAction";
 import PetFrame from "./components/PetFrame";
 
 function App() {
-  const [health, setHealth] = React.useState(100);
-  const [hunger, setHunger] = React.useState(100);
-  const [userData, setUserData] = React.useState(null);//DUMMY DATA JUST TO LOAD -- REMOVE THIS
-  const [alive, setAlive] = React.useState(true);
+  const [health, setHealth] = React.useState(localStorage.getItem('health') ? localStorage.getItem('health') : 100);
+  const [hunger, setHunger] = React.useState(localStorage.getItem('hunger') ? localStorage.getItem('hunger') : 100);
+  const [userData, setUserData] = React.useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null);
+  const [alive, setAlive] = React.useState(localStorage.getItem('alive') ? localStorage.getItem('alive') : true);
+
+  React.useEffect(() => {
+    localStorage.setItem('health', health);
+    localStorage.setItem('hunger', hunger);
+    localStorage.setItem('userData', JSON.stringify(userData));
+    localStorage.setItem('alive', alive);
+  }, [health, hunger, userData, alive]);
 
   React.useEffect(() => {
     if (health <= 0) {

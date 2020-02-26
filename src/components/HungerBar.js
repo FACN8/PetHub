@@ -3,7 +3,7 @@ import React from "react";
 const HungerBar = props => {
     let style = {
         "width": props.hunger + "%",
-        "font-size": "30px"
+        "fontSize": "30px"
     };
 
     return (

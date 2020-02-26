@@ -3,8 +3,8 @@ import React from "react"
 
 const HitAction = ({ setHealth }) => {
     const style = {
-        "font-size": "4rem",
-        "padding-bottom": "1.7rem"
+        "fontSize": "4rem",
+        "paddingBottom": "1.7rem"
     };
 
     const hit = () => {

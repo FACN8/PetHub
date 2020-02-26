@@ -3,7 +3,7 @@ import React from "react"
 
 const PetAction = ({ setHealth }) => {
     const style = {
-        "font-size": "4rem"
+        "fontSize": "4rem"
     };
 
     const pet = () => {
