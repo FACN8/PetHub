@@ -3,13 +3,12 @@ import React from 'react';
 
 const PetFrame =props =>{
     return(
-    <div className="PetFrame">
-         <div class="loop"></div>
+    <div>
+         <div className="loop"></div>
        <div className ="PetFarme-inner">
-           hiii
        </div>
-        {/* src={props.userData.avatar}  */}
-        <img src="https://www.tynker.com/projects/screenshot/58a47dc8949b56e02b8b48a9/pekmon-mlg-eat-donritos-and-mtn-dew.png" />
+       <img alt='avatar-img' src={props.userData.avatar_url} />
+        {/* <img src="https://www.tynker.com/projects/screenshot/58a47dc8949b56e02b8b48a9/pekmon-mlg-eat-donritos-and-mtn-dew.png" /> */}
         
      
          <div className="buttons">
@@ -23,7 +22,7 @@ const PetFrame =props =>{
              hit
          </div>
        </div> 
-        </div> 
+    </div> 
     )
 }
 

@@ -4,12 +4,20 @@ import "./StartFrame.css"
 
 
 const StartFrame = ({setUserData},...props) =>{
+    const [errState,setErrState] = React.useState(false);
     const handleSubmit = (event) =>{
         event.preventDefault();
         const username = event.target.username.value;
         const apiUrl = `https://api.github.com/users/${username}?access_token=${process.env.REACT_APP_GITHUB_TOKEN}`
         axiosGet(apiUrl)
-        .then(data => setUserData(data))
+        .then(data => {
+            setUserData(data.data)
+            setErrState(false)
+        })
+        .catch(err=> {
+            setErrState(err);
+        });
+        
         }
   return (
     <div className='input-form-container'>
@@ -21,6 +29,7 @@ const StartFrame = ({setUserData},...props) =>{
     ➜
     </button>
     </form>
+    {errState && <span className='err-msg'>Error .. try again</span>}
     </div>
   )
 }
