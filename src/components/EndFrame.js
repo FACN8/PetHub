@@ -1,4 +1,6 @@
 import React from "react";
+import "./EndFrame.css"
+
 
 const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
   const reset = () => {
@@ -10,6 +12,8 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
 
   return (
     <div className='end-frame-container'>
+      <div className='Gameover'>Game Over !</div>
+      <br></br>
       <button onClick={reset} className='reset-button'>
           Restart!
       </button>

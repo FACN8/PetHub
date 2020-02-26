@@ -1,25 +1,28 @@
 .reset-button {
-    background: blueviolet;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e84b30;
+    border: 2px solid #e74327;
+    box-shadow: 1px 1px 3px 2px blueviolet;
+    -webkit-transition: background-color 200ms ease, box-shadow 200ms ease;
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+}
 
-    color: white;
-    
-    border-style: outset;
-    
-    border-color: #eee;
-    
-    height: 30px;
-    
-    width: 33px;
-    
-    font: bold 15px arial, sans-serif;
-    
-    text-shadow:none;
-    
-    }
 .reset-button:hover {
     cursor: pointer;
 }
 
 .end-frame-container {
-position: absolute;
+    /* position: absolute; */
+}
+
+.Gameover{
+    margin-top: 40%;
+    font-size: xx-large;
+    font-family: 'Press Start 2P' ;
 }
