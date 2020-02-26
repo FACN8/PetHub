@@ -4,7 +4,7 @@ import axiosGet from "../utils/axiosGet"
 
 const StartFrame = ({ setUserData }, ...props) => {
   const [errState, setErrState] = React.useState(false);
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const username = event.target.username.value;
@@ -25,16 +25,16 @@ const StartFrame = ({ setUserData }, ...props) => {
       <br></br>
       <form onSubmit={handleSubmit} >
         <label htmlFor='username'>
-          <input name='username' type='text' />
+          <input id="name-input" placeholder="Enter GitHub Username" autocomplete="off" name='username' type='text' />
         </label>
         <button id='submit-btn' type='submit' value='Submit'>
           ➜
     </button>
-    </form>
-    {errState && <span className='err-msg'>Error .. try again</span>}
-    <div className='img'>
-       <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
-    </div>
+      </form>
+      {errState && <span className='err-msg'>Error .. try again</span>}
+      <div className='img'>
+        <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+      </div>
     </div>
   )
 }

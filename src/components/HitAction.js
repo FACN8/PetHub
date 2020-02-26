@@ -2,6 +2,11 @@ import React from "react"
 
 
 const HitAction = ({ setHealth }) => {
+    const style = {
+        "font-size": "4rem",
+        "padding-bottom": "1.7rem"
+    };
+
     const hit = () => {
 
         setHealth(health => {
@@ -14,8 +19,8 @@ const HitAction = ({ setHealth }) => {
     };
 
     return (
-        <div onClick={hit} className="button button--c">
-            Hit
+        <div onClick={hit} className="button" style={style}>
+            💥
         </div>
     );
 }

@@ -30,10 +30,10 @@ function App() {
         if (data) {
 
           setHunger(previousHunger => {
-            if (previousHunger >= 5) {
-              return previousHunger - 5;
+            if (previousHunger >= 1) {
+              return previousHunger - 1;
             } else {
-              setHealth(previousHealth => previousHunger === 0 ? previousHealth - 5 : previousHealth);
+              setHealth(previousHealth => previousHunger === 0 ? previousHealth - 1 : previousHealth);
               return 0;
             }
           });
@@ -42,7 +42,7 @@ function App() {
 
         return data;
       });
-    }, 5000);
+    }, 500);
     return () => clearInterval(timer);
   }, [userData]);
 
