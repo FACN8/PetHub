@@ -1,6 +1,6 @@
 import React from "react"
 import axiosGet from "../utils/axiosGet"
-
+import "./StartFrame.css"
 
 
 const StartFrame = ({setUserData},...props) =>{
@@ -18,7 +18,7 @@ const StartFrame = ({setUserData},...props) =>{
     <input name='username' type='text' />
     </label>
     <button  id='submit-btn' type='submit' value='Submit'>
-        Submit
+    ➜
     </button>
     </form>
     </div>
