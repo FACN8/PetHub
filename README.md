@@ -1,68 +1,98 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PetHub 
+By: @LogicX1 , @Fatmeeh , @Ivankhuri
 
-## Available Scripts
+## Pick a GitHub user as your pet!
 
-In the project directory, you can run:
+---
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Topics
+* [Overview](#-overview)
+* [Installing locally](#-Installing-locally-)
+* [Testing](#-Testing)
+* [Our process](#-Our-process)
+* [Our struggles](#-Our-struggles)
+* [Learning outcomes](#-Learning-outcomes)
+* [Limitations and future goals](#Current-limitations-and-future-goals)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## :page_with_curl: Overview:
+This is our project for React week.
+It is a one page react app.
+You can search for a github user, we will make an API request and get data from the github API.
+We use the name as your pet name.
+The pet have 2 status bars : 
+Hunger bar and Health bar.
+Those bars change with time or based on user actions, and update the page as they change.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can view the website app on netlify : 
+https://pethub.netlify.com/
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## :floppy_disk::package: Installing locally : 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. clone this rep.
+2. cd into the cloned rep.
+3. In the terminal run: npm i
+4. In the terminal run: npm start
 
-### `npm run eject`
+A browser page with the website will open.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Setting up enviorment variables:
+Requirements : GitHub API access token.
+* Create a .env file in the directory.
+    inside enter : 
+    REACT_APP_GITHUB_TOKEN='Your API token'
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# :tada: Testing:
+Testing is done using jest, it is installed by default with the create-react-app.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run the tests:
+* In the terminal on the repo path: npm test
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## :construction_worker: :construction:   Our process
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+The idea was specifed this week as a Tamagotchi app .
+* We decided how the design will be and what are the components needed for a MVP.
+* We created the app using [create-react-app](https://create-react-app.dev/docs/getting-started/). we created the app using their default template.
+* We added a component directory and created the file components.
+* We split the work , each person worked on few components.
+* After we reached MVP , We hosted on Netlify.
+* Final design was done by working togther.
+---
 
-### Making a Progressive Web App
+## :hatching_chick: :hatched_chick:  Our struggles
+ 
+- We started by setting up the project files and directories which was WRONG. this is done automatically using the create-react-app.
+- Updating 2 states where one relied on the other with interval was tricky, inside setInterval you would need to use promises or update a state inside a state, which is what we did. otherwise because of Async behavior only one state will be updated, and the other state that relies on the first will never change because it doesn't see that the first state changed.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+---
 
-### Advanced Configuration
+## :chicken: Learning outcomes
+ 
+- Building a React app.
+- Using create-react-app
+- Using bundlers and build scripts etc..
+- Testing interactively.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+---
 
-### Deployment
+## Current limitations and future goals
+### Limitations:
+- Only one pet can exist using a Github user name as its name.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Future goals
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Have multiple pets
+- Have better stats from some other useful API such as pokemons
