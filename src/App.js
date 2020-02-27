@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import StartFrame from "./components/StartFrame";
 import EndFrame from "./components/EndFrame";
@@ -9,7 +8,7 @@ import HungerBar from "./components/HungerBar";
 import HitAction from "./components/HitAction";
 import PetAction from "./components/PetAction";
 import PetFrame from "./components/PetFrame";
-
+import setItems from "./utils/setItems" ;
 function App() {
   const [health, setHealth] = React.useState(localStorage.getItem('health') || 100);
   const [hunger, setHunger] = React.useState(localStorage.getItem('hunger') || 100);
@@ -18,10 +17,12 @@ function App() {
   const [status, setStatus] = React.useState("");
 
   React.useEffect(() => {
-    localStorage.setItem('health', health);
-    localStorage.setItem('hunger', hunger);
-    localStorage.setItem('userData', JSON.stringify(userData));
-    localStorage.setItem('alive', alive);
+    setItems({
+      health,
+      hunger,
+      userData,
+      alive
+    });
   }, [health, hunger, userData, alive]);
 
   React.useEffect(() => {
