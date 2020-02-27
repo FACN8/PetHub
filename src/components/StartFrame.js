@@ -23,9 +23,9 @@ const StartFrame = ({ setUserData }, ...props) => {
     <div className='input-form-container'>
       <div className='start'>PetHub</div>
       <br></br>
-      <form onSubmit={handleSubmit} >
+      <form data-testid='input-form' onSubmit={handleSubmit} >
         <label htmlFor='username'>
-          <input id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
+          <input data-testid='username' id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
         </label>
         <button id='submit-btn' type='submit' value='Submit'>
           ➜
