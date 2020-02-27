@@ -15,8 +15,15 @@ const FeedAction = ({ setHunger, setStatus }) => {
 
         setStatus("🍪");
 
+        document.querySelector('#emoji').classList.add('animate');
+
+        setTimeout(() => {
+            if (document.querySelector('#emoji'))
+                document.querySelector('#emoji').classList.remove('animate');
+        }, 110);
+
         setHunger(hunger => {
-            let newHunger = hunger + 2;
+            let newHunger = +hunger + 2;
 
             if (newHunger > 100) {
                 return 100;

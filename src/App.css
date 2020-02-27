@@ -68,7 +68,7 @@ html, body {
   width: 100%;
   height: 2.6rem;
   background-color: #95D9DA;
-  transition: width 150ms;
+  transition: width 500ms;
 }
 
 .App-logo {
@@ -203,9 +203,14 @@ html, body {
 .img-user {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .emoji {
   color: white;
-  animation: 0.6s ease-in-out 0s 1 scaleOut;
+  transition: all 0.1s;
+}
+
+.animate {
+  font-size: 60px;
 }

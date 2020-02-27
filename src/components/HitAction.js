@@ -13,7 +13,14 @@ const HitAction = ({ setHealth, setStatus }) => {
 
         toggle()
         setStatus("💥");
-        
+
+        document.querySelector('#emoji').classList.add('animate');
+
+        setTimeout(() => {
+            if (document.querySelector('#emoji'))
+                document.querySelector('#emoji').classList.remove('animate');
+        }, 110);
+
         setHealth(health => {
             let newHealth = health - 6;
             if (newHealth < 0)

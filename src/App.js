@@ -16,7 +16,6 @@ function App() {
   const [alive, setAlive] = React.useState(localStorage.getItem('alive') || true);
   const [status, setStatus] = React.useState("");
 
-
   React.useEffect(() => {
     setItems({
       health,
