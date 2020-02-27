@@ -14,10 +14,8 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData, setStatus }) =>
     setHunger(100);
     setUserData(null);
     setStatus("");
-    localStorage.removeItem('alive');
-    localStorage.removeItem('health');
-    localStorage.removeItem('hunger');
-    localStorage.removeItem('userData');
+    localStorage.clear();
+
   }, []);
 
   return (

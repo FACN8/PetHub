@@ -11,11 +11,12 @@ import PetAction from "./components/PetAction";
 import PetFrame from "./components/PetFrame";
 
 function App() {
-  const [health, setHealth] = React.useState(localStorage.getItem('health') ? localStorage.getItem('health') : 100);
-  const [hunger, setHunger] = React.useState(localStorage.getItem('hunger') ? localStorage.getItem('hunger') : 100);
+  const [health, setHealth] = React.useState(localStorage.getItem('health') || 100);
+  const [hunger, setHunger] = React.useState(localStorage.getItem('hunger') || 100);
   const [userData, setUserData] = React.useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null);
-  const [alive, setAlive] = React.useState(localStorage.getItem('alive') ? localStorage.getItem('alive') : true);
+  const [alive, setAlive] = React.useState(localStorage.getItem('alive') || true);
   const [status, setStatus] = React.useState("");
+
 
   React.useEffect(() => {
     localStorage.setItem('health', health);
