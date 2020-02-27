@@ -69,6 +69,7 @@
   position: relative;
   border-radius: 54%/65% 65% 47% 47%;
   margin: auto;
+  margin-top: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -90,7 +91,6 @@
   overflow: hidden;
 }
 
-/* b3ml aldaqera alsfra alfadee mn fwq  */
 
 .loop {
   width: 30px;
@@ -147,6 +147,7 @@
   height: 1.8rem;
   width: 15rem;
   font-size: larger;
+  font-family: 'Livvic' ;
   border-radius: 1rem;
   padding-left: 1rem;
   border: solid white 1px;
@@ -191,4 +192,10 @@
   margin-top: 40%;
   font-size: xx-large;
   font-family: 'Press Start 2P';
+}
+
+
+.name{
+  font-family: 'Berkshire Swash' ;
+
 }
