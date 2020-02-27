@@ -11,8 +11,13 @@ const PetFrame = props => {
             </h1>
          </div>
          <div className='img-user'>
-            <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+     
+            <a href="https://github.com/FACN8/PetHub/blob/master/README.md">
+               <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+            </a>
+     
             <h1 id="emoji" className="emoji">{props.status ? "+" + props.status : props.status}</h1>
+
          </div>
          <br></br>
 

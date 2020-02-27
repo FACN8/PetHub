@@ -33,11 +33,8 @@ function App() {
 
   React.useEffect(() => {
     let timer = setInterval(() => {
-
       setUserData(data => {
-
         if (data) {
-
           setHunger(previousHunger => {
             if (previousHunger >= 1) {
               return previousHunger - 1;
@@ -46,9 +43,7 @@ function App() {
               return 0;
             }
           });
-
         }
-
         return data;
       });
     }, 500);
