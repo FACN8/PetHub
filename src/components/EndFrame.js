@@ -13,6 +13,7 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData, setStatus }) =>
     setHealth(100);
     setHunger(100);
     setUserData(null);
+    setStatus("");
     localStorage.clear();
 
   }, []);
