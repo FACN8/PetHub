@@ -20,13 +20,11 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
   }, []);
 
   return (
-    <div>
-      <div className="loop"> </div>
-      <div className='end-frame-container'>
-        <div className='Gameover'>Game Over!</div>
-        <br></br>
-        <div onClick={reset} className="button" style={style}>
-          ⟳
+    <div className='end-frame-container'>
+      <div className='Gameover'>Game Over!</div>
+      <br></br>
+      <div onClick={reset} className="reset-button" style={style}>
+        ⟳
       </div>
 
         <div className='img'>

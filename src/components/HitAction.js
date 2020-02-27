@@ -1,13 +1,15 @@
 import React from "react"
 
 
-const HitAction = ({ setHealth }) => {
+const HitAction = ({ setHealth, setStatus }) => {
     const style = {
         "fontSize": "4rem",
         "paddingBottom": "1.7rem"
     };
 
     const hit = () => {
+
+        setStatus("💥");
 
         setHealth(health => {
             let newHealth = health - 6;
