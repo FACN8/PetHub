@@ -21,23 +21,25 @@ const StartFrame = ({ setUserData }, ...props) => {
   }
   return (
     <div>
-    <div className="loop"> </div>
-    <div className='input-form-container'>
-      <div className='start'>PetHub</div>
-      <br></br>
-      <form onSubmit={handleSubmit} >
-        <label htmlFor='username'>
-          <input id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
-        </label>
-        <button id='submit-btn' type='submit' value='Submit'>
-          ➜
+      <div className="loop"> </div>
+      <div className='input-form-container'>
+        <div className='start'>PetHub</div>
+        <br></br>
+        <form onSubmit={handleSubmit} >
+          <label htmlFor='username'>
+            <input id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
+          </label>
+          <button id='submit-btn' type='submit' value='Submit'>
+            ➜
     </button>
-      </form>
-      {errState && <span className='err-msg'>Error .. try again</span>}
-      <div className='img'>
-        <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+        </form>
+        {errState && <span className='err-msg'>Error .. try again</span>}
+        <div className='img'>
+          <a href="https://github.com/FACN8/PetHub/blob/master/README.md"><img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
+          </a>
+
+        </div>
       </div>
-    </div>
     </div>
 
   )
