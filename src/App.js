@@ -58,7 +58,8 @@ function App() {
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
-          setHunger={setHunger} />
+          setHunger={setHunger}
+          setStatus={setStatus} />
       </div>
     );
   } else if (!userData) {
