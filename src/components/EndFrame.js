@@ -33,7 +33,6 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
 
         </div>
       </div>
-    </div>
 
   );
 };
