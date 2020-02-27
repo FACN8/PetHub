@@ -20,6 +20,8 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
   }, []);
 
   return (
+    <div>
+    <div className="loop"> </div>
     <div className='end-frame-container'>
       <div className='Gameover'>Game Over!</div>
       <br></br>
@@ -31,6 +33,8 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
         <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
       </div>
     </div>
+    </div>
+
   );
 };
 

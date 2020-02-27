@@ -69,6 +69,7 @@
   position: relative;
   border-radius: 54%/65% 65% 47% 47%;
   margin: auto;
+  margin-top: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -90,7 +91,6 @@
   overflow: hidden;
 }
 
-/* b3ml aldaqera alsfra alfadee mn fwq  */
 
 .loop {
   width: 30px;

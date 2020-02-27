@@ -20,6 +20,8 @@ const StartFrame = ({ setUserData }, ...props) => {
 
   }
   return (
+    <div>
+    <div className="loop"> </div>
     <div className='input-form-container'>
       <div className='start'>PetHub</div>
       <br></br>
@@ -36,6 +38,8 @@ const StartFrame = ({ setUserData }, ...props) => {
         <img src="https://studioboico.com/wp-content/uploads/2018/12/Gizmo-PNG-BIG.png" width='150px'></img>
       </div>
     </div>
+    </div>
+
   )
 }
 
