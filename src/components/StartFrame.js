@@ -20,6 +20,7 @@ const StartFrame = ({ setUserData }, ...props) => {
 
   }
   return (
+
     <div>
       <div className="loop"> </div>
       <div className='input-form-container'>
@@ -27,7 +28,7 @@ const StartFrame = ({ setUserData }, ...props) => {
         <br></br>
         <form onSubmit={handleSubmit} >
           <label htmlFor='username'>
-            <input id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
+          <input data-testid='username' id="name-input" placeholder="GitHub Username" autoComplete="off" name='username' type='text' />
           </label>
           <button id='submit-btn' type='submit' value='Submit'>
             ➜
