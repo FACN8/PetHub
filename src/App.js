@@ -17,13 +17,11 @@ function App() {
   const [alive, setAlive] = React.useState(localStorage.getItem('alive') || true);
   const [status, setStatus] = React.useState("");
 
-
   React.useEffect(() => {
     localStorage.setItem('health', health);
     localStorage.setItem('hunger', hunger);
     localStorage.setItem('userData', JSON.stringify(userData));
     localStorage.setItem('alive', alive);
-    console.log(localStorage.getItem('health'));
   }, [health, hunger, userData, alive]);
 
   React.useEffect(() => {

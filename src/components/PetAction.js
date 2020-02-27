@@ -18,7 +18,7 @@ const PetAction = ({ setHealth, setStatus }) => {
         }, 110);
 
         setHealth(health => {
-            let newHealth = health + 1;
+            let newHealth = +health + 1;
 
             if (newHealth > 100) {
                 return 100;

@@ -19,7 +19,7 @@ const FeedAction = ({ setHunger, setStatus }) => {
         }, 110);
 
         setHunger(hunger => {
-            let newHunger = hunger + 2;
+            let newHunger = +hunger + 2;
 
             if (newHunger > 100) {
                 return 100;
