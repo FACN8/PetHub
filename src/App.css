@@ -1,69 +1,21 @@
-.progress-health {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  width: 80%;
-  background-color: grey;
-}
-
-.progress-hunger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  width: 73%;
-  background-color: grey;
-}
-
-.bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
+html, body {
+  height: 100%;
   width: 100%;
-  height: 2.6rem;
-  background-color: #95D9DA;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root {
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  max-height: 50rem;
 }
 
 .PetFrame {
-  width: 556px;
-  height: 710px;
+  width: 100%;
+  height: 100%;
   background: #AE8CA3;
   text-align: center;
   position: relative;
@@ -78,45 +30,64 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  animation: 0.6s ease-in-out 0s 1 scaleOut;
 }
 
-.PetFrame-inner {
-  width: 256px;
-  height: 310px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 54%/65% 65% 47% 47%;
-  overflow: hidden;
+@keyframes scaleOut {
+  0% {
+    transform: scale(4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.progress-health {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 80%;
+  background-color: grey;
+}
+
+.progress-hunger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 76%;
+  background-color: grey;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width: 100%;
+  height: 2.6rem;
+  background-color: #95D9DA;
+  transition: width 150ms;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 /* b3ml aldaqera alsfra alfadee mn fwq  */
-
-.loop {
-  width: 30px;
-  height: 30px;
-  background-color: #AE8CA3;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-left: -15px;
-  top: -12px;
-}
-
-.loop:before {
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background-color: #fcf8ec;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  margin-left: -9px;
-  margin-top: -9px;
-  border: 2px solid #AE8CA3;
-  box-shadow: -1px -1px 2px 2px #AE8CA3;
-}
 
 .button {
   display: inline-block;
@@ -136,6 +107,22 @@
 
 .button:active {
   transform: scale(0.8);
+}
+
+.reset-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin: 8px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  transform: rotate(360deg);
 }
 
 .input-form-container {
@@ -191,4 +178,34 @@
   margin-top: 40%;
   font-size: xx-large;
   font-family: 'Press Start 2P';
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.name h1 {
+  color: #ffe3b0;
+}
+
+.user-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100px;
+  margin-right: 1rem;
+  border: solid pink 1px;
+}
+
+.img-user {
+  display: flex;
+  flex-direction: row;
+}
+
+.emoji {
+  color: white;
+  animation: 0.6s ease-in-out 0s 1 scaleOut;
 }

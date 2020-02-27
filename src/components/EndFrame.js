@@ -23,7 +23,7 @@ const EndFrame = ({ setAlive, setHunger, setHealth, setUserData }) => {
     <div className='end-frame-container'>
       <div className='Gameover'>Game Over!</div>
       <br></br>
-      <div onClick={reset} className="button" style={style}>
+      <div onClick={reset} className="reset-button" style={style}>
         ⟳
       </div>
 

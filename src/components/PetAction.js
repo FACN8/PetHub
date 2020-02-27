@@ -1,16 +1,21 @@
 import React from "react"
 
 
-const PetAction = ({ setHealth }) => {
+const PetAction = ({ setHealth, setStatus }) => {
     const style = {
         "fontSize": "4rem"
     };
 
     const pet = () => {
+
+        setStatus("🐶");
+
         setHealth(health => {
-            let newHealth = health + 3;
-            if (newHealth > 100)
+            let newHealth = health + 1;
+
+            if (newHealth > 100) {
                 return 100;
+            }
 
             return newHealth;
         })
