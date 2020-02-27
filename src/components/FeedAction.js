@@ -1,17 +1,22 @@
 import React from "react"
 
 
-const FeedAction = ({ setHunger }) => {
+const FeedAction = ({ setHunger, setStatus }) => {
     const style = {
         "fontSize": "4rem",
         "paddingBottom": "1.7rem"
     };
 
     const feed = () => {
+
+        setStatus("🍪");
+
         setHunger(hunger => {
-            let newHunger = hunger + 5;
-            if (newHunger > 100)
+            let newHunger = hunger + 2;
+
+            if (newHunger > 100) {
                 return 100;
+            }
 
             return newHunger;
         })

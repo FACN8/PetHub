@@ -15,12 +15,15 @@ function App() {
   const [hunger, setHunger] = React.useState(localStorage.getItem('hunger') || 100);
   const [userData, setUserData] = React.useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null);
   const [alive, setAlive] = React.useState(localStorage.getItem('alive') || true);
+  const [status, setStatus] = React.useState("");
+
 
   React.useEffect(() => {
     localStorage.setItem('health', health);
     localStorage.setItem('hunger', hunger);
     localStorage.setItem('userData', JSON.stringify(userData));
     localStorage.setItem('alive', alive);
+    console.log(localStorage.getItem('health'));
   }, [health, hunger, userData, alive]);
 
   React.useEffect(() => {
@@ -56,7 +59,8 @@ function App() {
           setAlive={setAlive}
           setUserData={setUserData}
           setHealth={setHealth}
-          setHunger={setHunger} />
+          setHunger={setHunger}
+          setStatus={setStatus} />
       </div>
     );
   } else if (!userData) {
@@ -72,7 +76,8 @@ function App() {
       <div className="PetFrame">
 
         <PetFrame
-          userData={userData} />
+          userData={userData}
+          status={status} />
         <HealthBar
           health={health} />
         <HungerBar
@@ -81,11 +86,14 @@ function App() {
         <div className="actions-container">
 
           <FeedAction
-            setHunger={setHunger} />
+            setHunger={setHunger}
+            setStatus={setStatus} />
           <PetAction
-            setHealth={setHealth} />
+            setHealth={setHealth}
+            setStatus={setStatus} />
           <HitAction
-            setHealth={setHealth} />
+            setHealth={setHealth}
+            setStatus={setStatus} />
 
         </div>
       </div>
